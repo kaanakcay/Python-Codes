@@ -38,3 +38,19 @@ average = data['temp'].mean()
 #max bulma
 maximum = data['temp'].max()
 print(maximum)
+
+#Get Data in columns
+print("Get Data in columns", data["condition"])
+print("Get Data in columns", data.condition)
+
+#Get Data in Row
+print("Get Data in a Row: ")
+print(data[data.day == "Monday"])
+
+#Challenge converting mondays temperature to fahrenheit
+celsius = data[data.day == "Monday"].temp #this retuns a series cunku kac tane monday var bilmiyoruz.
+fahrenheit = celsius * 9 / 5 + 32
+print("Challenge with index:", fahrenheit)
+print("Challenge without index:", fahrenheit[0])
+
+
